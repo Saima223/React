@@ -1,20 +1,21 @@
+import ProfileCard from "./ProfileCard";
+
 function App() {
-  const name = "John";
-  const age = 32;
-
   return (
-    <>
-      {/* Rule 1: Single parent element */}
-      <h1 className="title">Hello {name}</h1>
-
-      {/* Rule 2: className instead of class */}
-      <p>Age: {age}</p>
-
-      {/* Rule 3: JS inside {} */}
-      <p>{age >= 18 ? "Adult" : "Minor"}</p>
-
-      {/* Rule 4: Use ternary instead of if/else */}
-    </>
+    <div>
+      <ProfileCard
+        name="John"
+        age={24}
+        job="Developer"
+        image="https://i.pravatar.cc/150?img=1"
+      />
+      <ProfileCard
+        name="Joy"
+        age={23}
+        job="Frontend Developer"
+        image="https://i.pravatar.cc/150?img=2"
+      />
+    </div>
   );
 }
 
