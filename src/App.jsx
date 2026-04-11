@@ -15,6 +15,18 @@ function App() {
         job="Frontend Developer"
         image="https://i.pravatar.cc/150?img=2"
       />
+      <ProfileCard
+        name="Saksham"
+        age={24}
+        job="Developer"
+        image="https://i.pravatar.cc/150?img=1"
+      />
+      <ProfileCard
+        name="nidhi"
+        age={23}
+        job="Frontend Developer"
+        image="https://i.pravatar.cc/150?img=2"
+      />
     </div>
   );
 }
