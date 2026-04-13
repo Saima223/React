@@ -2,10 +2,24 @@ import ProfileCard from "./ProfileCard";
 import { useState } from "react";
 
 function App() {
+  const [name, setName] = useState("");
   const [age, setAge] = useState(15);
   const [text, setText] = useState("hey");
+
+  function handleChange(event){
+    setName(event.target.value);
+  }
+  
   return (
     <div>
+      <input 
+      type="text"
+      placeholder="type your name"
+      onChange={handleChange}
+      value={name}
+      ></input>
+      <h1>hello!! {name}</h1>
+      
       <button onClick={() => setText (text => "Changed")}>change text
       </button>
       <h1>{text}</h1>
@@ -14,6 +28,9 @@ function App() {
       
       <button onClick={() => setAge (age => age +1)}>
         Increase age
+      </button> {" "}
+      <button onClick={() => setAge (age => age -1)}>
+      -
       </button>
       <ProfileCard
         name="John"
