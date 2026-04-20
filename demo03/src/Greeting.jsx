@@ -1,13 +1,13 @@
 import { useState, createContext, useContext } from "react";
-import {UserContext} from "./App";
+import {UserContext} from "./context";
 
 // Greeting component
 function Greeting() {
   const data = useContext(UserContext)
   return (
     <>
-      <h2>Greeting {data.name}</h2>
-      <p>Greeting {data.city}</p>
+      <h2>Greeting {data.user}</h2>
+      <h2> my city {data.city}</h2>
     </>
   );
 }

@@ -1,21 +1,15 @@
-import { useState, createContext} from 'react';
+import { useState} from 'react';
 import Greeting from './Greeting';
-
-// Create context
-export const UserContext = createContext(null);
+import { UserContext } from './context';
 
 // Main App
 export default function App() {
 const [user] = useState('Riya'); //chnage here to add more
-const [name] = useState('yay');
-const [age] = useState(15);
-const [city] = useState("mumbai");
+const [city] = useState ("Mumbai");
 
   return (
-    <UserContext.Provider value={{user, name, age, city}}> {/**change here */}
+    <UserContext.Provider value={{user, city}}> {/**change here */}
       <Greeting /> {/**call here */}
-      <Greeting />
-      <Greeting />
     </UserContext.Provider>
   );
 }
