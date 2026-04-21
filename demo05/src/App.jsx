@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react'
+import React from 'react'
+import useFetch from './costumhooks/useFetch';
 
 function App() {
-  const [responses, setResponses] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => setResponses(data));
-  }, []);
-
+  const data = useFetch("https://jsonplaceholder.typicode.com/users")
   return (
     <>
       <h2>its a custom hook</h2>
-      {responses.map((res) => {
+      {data.map((res) => {
         return (
           <h2 key={res.id}>
             {res.username}, {res.name}
