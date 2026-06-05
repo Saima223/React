@@ -1,0 +1,26 @@
+.note {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.active {
+  background-color: lightgreen;
+}
+
+.highlighted {
+  font-weight: bold;
+  color: red;
+}
+.btn {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+}
+
+.success {
+  background-color: green;
+}
+
+.danger {
+  background-color: red;
+}
